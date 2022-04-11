@@ -28,6 +28,7 @@
 #define Q4 3
 #define VREF 5.0      // analog reference voltage(Volt) of the ADC
 #define SCOUNT  30           // sum of sample point
+
 int analogBuffer[4][SCOUNT];    // store the analog value in the array, read from ADC
 int analogBufferTemp[4][SCOUNT];
 int analogBufferIndex = 0,copyIndex = 0,j = 0;
@@ -39,11 +40,10 @@ float averageVoltage[4] = {0,0,0,0};
 int x=0;
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-//const char *SSID = "DowroongMansion";
-//const char *PWD = "11223344";
-const char *SSID = "Fairuz";
-const char *PWD = "1212312121";
-const char* mqttServer = "192.168.43.151";
+
+const char *SSID = //* "Your WiFi Name" *//;
+const char *PWD = /* "Your Password WiFi" */;
+const char* mqttServer = /* " IP MQTT Broker " */;
 const int mqttPort = 1883;
 
 WiFiClient espClient;
